@@ -1,0 +1,32 @@
+/* ************ Gestion des styles des présentations carte ************ */
+.product-card {
+    padding: 2%;
+    background-color: white;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25); /* ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules */
+}
+
+.product-info {
+    margin-top: 0;
+    padding-top: 20px;
+}
+/* Big screen */
+@media screen and (min-width: 737px) {
+    /* ************ Structure de la page Produits ************ */
+    .products {
+        display: flex; /* crée un contexte flex pour ses enfants */
+        flex-wrap: wrap; /* le contenu peut être distribué sur plusieurs lignes */
+    }
+    /* ************ Structure de la carte ************ */
+    .product-card {
+        display: flex; /* crée un contexte flex pour ses enfants */
+        flex-direction: column; /* affichage vertical */
+        justify-content: space-between; /* alignement ici vertical en mode justifié */
+        align-items: center; /* alignement des cartes sur un même axe central horizontal par colonne */
+        flex-basis: 16%; /* flex-basis : 5 images x 20% =100% + padding 2% =20-4=16% */
+        /* combinaison de 3 propriétés :
+                           flex-grow : capacité pour un élément à s’étirer dans l’espace restant,
+                           flex-shrink : capacité pour un élément à se contracter si nécessaire,
+                           flex-basis : taille initiale de l’élément avant que l’espace restant ne soit distribué.
+                           Ici la carte fait 16% de la dimension totale et ce qui reste est distribué entre les espaces*/
+    }
+}

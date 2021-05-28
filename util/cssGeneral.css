@@ -1,0 +1,35 @@
+/* ************ Gestion des styles des messages et erreurs ************ */
+.erreur {
+    background-color: rgb(237, 210, 229);
+    color: rgb(203, 28, 128);
+    font-size: 1.1em;
+    width: 95%;
+}
+
+.message {
+    background-color: rgb(99, 184, 255);
+    color: rgb(0, 0, 205);
+    font-size: 1.1em;
+    width: 95%;
+
+}
+
+.message li {
+    list-style-type: none; /* permet de définir l'apparence de la puce d'un élément de liste */
+    text-align: center;
+}
+
+
+/* Big screen */
+@media screen and (min-width: 737px) {
+    /************* Gestion de la présentation (layout) ************ */
+    /* conteneur des colonnes  */
+    .flexrow{
+        display: flex; /* crée un contexte flex pour ses enfants */
+        flex-wrap: wrap; /* le contenu peut être distribué sur plusieurs lignes */
+    }
+
+    .produits, .panier, .commande {
+        flex: 1; /* cet élément enfant va occuper tout l'espace disponible sur l'axe horizontal*/
+    }
+}

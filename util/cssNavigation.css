@@ -1,0 +1,50 @@
+/* ************ Gestion des styles des menus************ */
+.navbar, .nav {
+    list-style-type: none; /* permet de définir l'apparence de la puce d'un élément de liste */
+    padding: 0; /* permet de créer un espace supplémentaire à l'intérieur d'un élément. */
+}
+
+.navbar {
+    margin: 0; /* marge autour d'un élément */
+}
+
+.ul li {
+    padding: 1px; /* permet de créer un espace supplémentaire à l'intérieur d'un élément. */
+    text-align: center; /* Le texte est centré dans l'élément */
+    width: 200px;
+    color: white;
+    border: 1px solid #600; /* bordure de chaque élément li  */
+    margin-right: 1px; /* marge droite autour d'un élément */
+    background: #ccff11; /* le fonds devient vert clair quand la sourie passe dessus */
+}
+
+.ul li a {
+    text-decoration: none; /* pas de soulignement du texte */
+}
+
+.navbar li a:hover {
+    background: white; /* le fonds devient blanc quand la sourie passe dessus */
+}
+/* small screens */
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column; /* affichage vertical */
+    }
+
+}
+/* Big screen */
+@media screen and (min-width: 737px) {
+    /* Style de la barre de navigation supérieure */
+    .navbar {
+        display: flex; /* crée un contexte flex pour ses enfants */
+        justify-content: center; /* les éléments enfants sont centrés */
+
+    }
+
+    /* Style de la barre de navigation du coté droit */
+    .nav {
+        display: flex; /* crée un contexte flex pour ses enfants */
+        flex-direction: column; /* affichage des enfants vertical */
+    }
+}

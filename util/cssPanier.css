@@ -1,0 +1,84 @@
+/* ************ Gestion des styles du formulaire Pannier ************ */
+.panier {
+    background-color: #9FD987;
+    margin-top: 5px;
+}
+
+.panier-text {
+    font-family: "Unica One", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-left: 2em;
+}
+.bck-white {
+    background-color: white;
+}
+.textformat {
+    display: block;
+    font-size: 0.83em;
+    font-weight: bold;
+}
+ol.collection {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+/* Smartphone */
+@media screen and (max-width: 580px) {
+    .collection-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+/* small screens */
+/* Responsive layout - quand l'écran est large de moins de 700px, faire en sorte que les deux colonnes s'empilent l'une sur l'autre plutôt que l'une à côté de l'autre */
+@media screen and (max-width: 700px) {
+    .collection-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .item {
+        border-radius: 2px;
+        padding: 10px;
+        text-align: center;
+    }
+
+}
+/* Big screen */
+@media screen and (min-width: 737px) {
+    /************* Gestion de la présentation Formulaire Panier ************ */
+    .item-container {
+        display: grid;
+        grid-template-columns: 200px 300px 5em 5em 5em;
+    }
+
+    .attribute {
+        text-decoration-color: white;
+        padding: 2px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .item {
+        padding: 10px;
+        align-self: center;
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .textformat {
+        margin-block-start: 1.67em;
+        margin-block-end: 1.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+}

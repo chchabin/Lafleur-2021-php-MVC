@@ -1,0 +1,126 @@
+/* ************ Gestion des styles du formulaire Commande ************ */
+.commande {
+    background-color: #9FD987;
+    margin-top: 5px;
+}
+/* ************ Gestion des styles du formulaire Commande (Decoration)************ */
+
+.flexform > fieldset {
+    padding: 1em;
+    background: #fff;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+input,
+textarea {
+    padding: .3em;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    background: #9FD987;
+}
+
+label {
+    flex-grow: initial; /*  */
+    flex-shrink: 0; /*  */
+    flex-basis: 120px; /*  */
+    max-width: 220px; /*  */
+}
+
+p > input[type=submit], input[type=reset] {
+    padding: .3em 1em;
+    background: #555;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    /*margin-left: auto;*/
+}
+
+fieldset:first-child p:first-child {
+    justify-content: flex-end;
+}
+
+fieldset > p:first-child {
+    margin-top: 0;
+}
+
+fieldset > p:last-child {
+    margin-bottom: 0;
+}
+/* small screens */
+@media screen and (max-width: 700px) {
+    .flexrow{
+        flex-direction: column; /* affichage vertical */
+    }
+
+    .flexform {
+        flex-direction: column;
+    }
+
+    .flexform p {
+        display: block;
+    }
+
+    label {
+        display: block;
+        width: auto;
+        text-align: left;
+    }
+
+    .flexform > fieldset {
+        width: auto;
+    }
+
+    .flexform > fieldset + fieldset {
+        margin-left: 0;
+        margin-bottom: 1em;
+        order: -1;
+    }
+
+    input {
+        width: 100%
+    }
+}
+/* Big screen */
+@media screen and (min-width: 737px) {
+    /************* Gestion de la présentation Formulaire Commande ************ */
+    /* 1- positioning the 2 divs */
+
+    .flexform {
+        display: flex; /* crée un contexte flex pour ses enfants */
+        flex-wrap: wrap; /* le contenu peut être distribué sur plusieurs lignes */
+        margin: 1em;
+    }
+
+    /* sélection des éléments enfant de type fieldset s'appliquant au seul élément flexform*/
+    .flexform > fieldset {
+        flex: 1;
+        min-width: 0; /* fix for min-width: auto */
+    }
+
+    .flexform > fieldset + fieldset {
+        margin-left: 1em;
+    }
+
+    /* 2- fluid inputs */
+    fieldset > p {
+        display: flex;
+    }
+
+    /* Mise en forme des input en excluant les boutons submit et reset */
+    .flexform input:not([type=submit]):not([type=reset]) {
+        flex: 1; /* fluid width */
+        display: block; /* IE fix */
+        min-width: 0; /* fix for min-width: auto */
+    }
+
+    /* 3- fluid textarea */
+    fieldset + fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
