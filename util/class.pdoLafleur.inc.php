@@ -141,5 +141,9 @@ class PdoLafleur
 		
 	
 	}
+    public function countLogin($login,$mdp){
+        $req="select count(id) from administrateur where nom='$login' and mdp='$mdp'";
+        $res = PdoLafleur::$monPdo->query($req);
+        return $res->fetch();
+    }
 }
-?>

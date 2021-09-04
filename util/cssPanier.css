@@ -21,8 +21,8 @@
     font-weight: bold;
 }
 ol.collection {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 /* Smartphone */
@@ -33,7 +33,7 @@ ol.collection {
     }
 }
 /* small screens */
-/* Responsive layout - quand l'écran est large de moins de 700px, faire en sorte que les deux colonnes s'empilent l'une sur l'autre plutôt que l'une à côté de l'autre */
+/* Responsive layout - quand l’écran est large de moins de 700px, faire en sorte que les deux colonnes s’empilent l’une sur l’autre plutôt que l’une à côté de l’autre */
 @media screen and (max-width: 700px) {
     .collection-container {
         display: grid;
@@ -78,7 +78,7 @@ ol.collection {
     .textformat {
         margin-block-start: 1.67em;
         margin-block-end: 1.67em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
     }
 }

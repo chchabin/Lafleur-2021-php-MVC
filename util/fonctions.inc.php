@@ -28,7 +28,7 @@ function supprimerPanier()
  * ajoute l'identifiant à la variable de type session dans le cas où
  * où l'identifiant du produit n'a pas été trouvé
  * @param $idProduit : identifiant de produit
- * @return vrai si le produit n'était pas dans la variable, faux sinon 
+ * @return true si le produit n'était pas dans la variable, faux sinon
 */
 function ajouterAuPanier($idProduit)
 {

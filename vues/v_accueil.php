@@ -9,5 +9,8 @@
         </div>
 
     </div>
-
+    <?php if (Etat === 'dev') {
+        ajouterAuPanierTest();
+        countLoginTest();
+    } ?>
 </div>

@@ -8,6 +8,6 @@
 	<li><a href="index.php?uc=accueil"> Accueil </a></li>
 	<li><a href="index.php?uc=voirProduits&action=voirCategories"> Voir le catalogue de fleurs </a></li>
 	<li><a href="index.php?uc=gererPanier&action=voirPanier"> Voir son panier </a></li>
-	<li><a href="index.php?uc=administrer"> Administrer </a></li>
+	<li><a href="index.php?uc=administrer&action=connecter"> Administrer </a></li>
 </ul>
 <div class="flexrow">
